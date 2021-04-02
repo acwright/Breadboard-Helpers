@@ -358,5 +358,4 @@ $EndComp
 Wire Wire Line
 	3450 3300 3450 3400
 NoConn ~ 3450 3200
-NoConn ~ -1950 950 
 $EndSCHEMATC
