@@ -1,0 +1,362 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Power Helper"
+Date "2021-04-02"
+Rev "1"
+Comp "A.C. Wright Design"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Power_Helper:USB_C_Receptacle_Power_Only J1
+U 1 1 6066BB4F
+P 1950 3900
+F 0 "J1" H 2057 4675 50  0000 C CNN
+F 1 "USB_C_Receptacle_Power_Only" H 2057 4676 50  0001 C CNN
+F 2 "Power Helper:CUI_UJC-HP-3-SMT-TR" H 2100 3900 50  0001 C CNN
+F 3 "" H 2100 3900 50  0001 C CNN
+	1    1950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6066D5B3
+P 2950 3900
+F 0 "R1" H 3020 3946 50  0000 L CNN
+F 1 "5.1k" H 3020 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2880 3900 50  0001 C CNN
+F 3 "~" H 2950 3900 50  0001 C CNN
+	1    2950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6066DAA6
+P 3250 3900
+F 0 "R2" H 3320 3946 50  0000 L CNN
+F 1 "5.1k" H 3320 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3180 3900 50  0001 C CNN
+F 3 "~" H 3250 3900 50  0001 C CNN
+	1    3250 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3550 3250 3550
+Wire Wire Line
+	3250 3550 3250 3750
+Wire Wire Line
+	2950 3750 2950 3650
+Wire Wire Line
+	2950 3650 2550 3650
+Wire Wire Line
+	1850 4800 1850 4900
+Wire Wire Line
+	1850 4900 1950 4900
+Wire Wire Line
+	1950 4900 1950 4800
+Wire Wire Line
+	1950 4900 1950 5000
+Connection ~ 1950 4900
+$Comp
+L power:GND #PWR01
+U 1 1 6066F0A0
+P 1950 5000
+F 0 "#PWR01" H 1950 4750 50  0001 C CNN
+F 1 "GND" H 1955 4827 50  0000 C CNN
+F 2 "" H 1950 5000 50  0001 C CNN
+F 3 "" H 1950 5000 50  0001 C CNN
+	1    1950 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6066F26D
+P 3250 4300
+F 0 "#PWR02" H 3250 4050 50  0001 C CNN
+F 1 "GND" H 3255 4127 50  0000 C CNN
+F 2 "" H 3250 4300 50  0001 C CNN
+F 3 "" H 3250 4300 50  0001 C CNN
+	1    3250 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4050 2950 4200
+Wire Wire Line
+	2950 4200 3250 4200
+Wire Wire Line
+	3250 4200 3250 4050
+Wire Wire Line
+	3250 4300 3250 4200
+Connection ~ 3250 4200
+Wire Wire Line
+	2550 3300 2650 3300
+Wire Wire Line
+	2650 3300 2650 3400
+Wire Wire Line
+	2650 3400 2550 3400
+Wire Wire Line
+	2650 3300 3050 3300
+Connection ~ 2650 3300
+Wire Wire Line
+	3450 3300 3700 3300
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 6067294D
+P 4200 3300
+F 0 "#FLG02" H 4200 3375 50  0001 C CNN
+F 1 "PWR_FLAG" H 4200 3473 50  0001 C CNN
+F 2 "" H 4200 3300 50  0001 C CNN
+F 3 "~" H 4200 3300 50  0001 C CNN
+	1    4200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 60672E41
+P 1950 4900
+F 0 "#FLG01" H 1950 4975 50  0001 C CNN
+F 1 "PWR_FLAG" V 1950 5028 50  0001 L CNN
+F 2 "" H 1950 4900 50  0001 C CNN
+F 3 "~" H 1950 4900 50  0001 C CNN
+	1    1950 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6067418B
+P 3700 3900
+F 0 "R3" H 3770 3946 50  0000 L CNN
+F 1 "330" H 3770 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3630 3900 50  0001 C CNN
+F 3 "~" H 3700 3900 50  0001 C CNN
+	1    3700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4050 3700 4200
+Wire Wire Line
+	3700 4200 3250 4200
+$Comp
+L Device:LED D1
+U 1 1 60674E83
+P 3700 3550
+F 0 "D1" V 3739 3432 50  0000 R CNN
+F 1 "LED" V 3648 3432 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 3700 3550 50  0001 C CNN
+F 3 "~" H 3700 3550 50  0001 C CNN
+	1    3700 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 3750 3700 3700
+Wire Wire Line
+	3700 3400 3700 3300
+$Comp
+L Regulator_Linear:AZ1117-3.3 U1
+U 1 1 60676370
+P 4650 3300
+F 0 "U1" H 4650 3542 50  0000 C CNN
+F 1 "AZ1117-3.3" H 4650 3451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4650 3500 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 4750 3050 50  0001 C CNN
+	1    4650 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3300 4200 3300
+Connection ~ 3700 3300
+$Comp
+L Device:CP C1
+U 1 1 6067C558
+P 4200 3900
+F 0 "C1" H 4315 3946 50  0000 L CNN
+F 1 "10uF" H 4315 3855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4238 3750 50  0001 C CNN
+F 3 "~" H 4200 3900 50  0001 C CNN
+	1    4200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3750 4200 3300
+Connection ~ 4200 3300
+Wire Wire Line
+	4200 3300 4350 3300
+Wire Wire Line
+	4200 4050 4200 4200
+Wire Wire Line
+	4200 4200 3700 4200
+Connection ~ 3700 4200
+Wire Wire Line
+	4650 3600 4650 4200
+Wire Wire Line
+	4650 4200 4200 4200
+Connection ~ 4200 4200
+$Comp
+L Device:CP C2
+U 1 1 6067DB7D
+P 5100 3900
+F 0 "C2" H 5215 3946 50  0000 L CNN
+F 1 "22uF" H 5215 3855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5138 3750 50  0001 C CNN
+F 3 "~" H 5100 3900 50  0001 C CNN
+	1    5100 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3300 5100 3300
+Wire Wire Line
+	5100 3300 5100 3750
+Wire Wire Line
+	5100 4050 5100 4200
+Wire Wire Line
+	5100 4200 4650 4200
+Connection ~ 4650 4200
+Wire Wire Line
+	5100 3300 5100 3050
+Connection ~ 5100 3300
+Wire Wire Line
+	3700 3300 3700 3050
+Text GLabel 5100 3050 1    50   Output ~ 0
++3V3
+Text GLabel 3700 3050 1    50   Output ~ 0
++5V
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 60680C72
+P 7550 3400
+F 0 "SW2" H 7550 3593 50  0000 C CNN
+F 1 "SW_SPDT" H 7550 3594 50  0001 C CNN
+F 2 "Switches:SWITCH_SPST_SMD_A" H 7550 3400 50  0001 C CNN
+F 3 "~" H 7550 3400 50  0001 C CNN
+	1    7550 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW3
+U 1 1 6068283F
+P 7550 4000
+F 0 "SW3" H 7550 4193 50  0000 C CNN
+F 1 "SW_SPDT" H 7550 4194 50  0001 C CNN
+F 2 "Switches:SWITCH_SPST_SMD_A" H 7550 4000 50  0001 C CNN
+F 3 "~" H 7550 4000 50  0001 C CNN
+	1    7550 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3500 7100 3500
+Wire Wire Line
+	7100 3500 7100 4100
+Wire Wire Line
+	7100 4100 7350 4100
+Wire Wire Line
+	7350 3900 7250 3900
+Wire Wire Line
+	7250 3900 7250 3300
+Wire Wire Line
+	7250 3300 7350 3300
+Wire Wire Line
+	7250 3300 6950 3300
+Connection ~ 7250 3300
+Wire Wire Line
+	7100 3500 6950 3500
+Connection ~ 7100 3500
+Text GLabel 6950 3300 0    50   Input ~ 0
++5V
+Text GLabel 6950 3500 0    50   Input ~ 0
++3V3
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J3
+U 1 1 6068C29B
+P 8600 3950
+F 0 "J3" H 8650 4075 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 8650 4076 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 8600 3950 50  0001 C CNN
+F 3 "~" H 8600 3950 50  0001 C CNN
+	1    8600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3350 9000 3450
+Wire Wire Line
+	8900 3950 9000 3950
+Wire Wire Line
+	9000 3950 9000 4050
+Wire Wire Line
+	9000 4050 8900 4050
+Wire Wire Line
+	9000 3450 9000 3950
+Connection ~ 9000 3450
+Connection ~ 9000 3950
+Connection ~ 9000 4050
+Wire Wire Line
+	8300 4000 8300 3950
+Wire Wire Line
+	8300 3950 8400 3950
+Wire Wire Line
+	8300 4000 8300 4050
+Wire Wire Line
+	8300 4050 8400 4050
+Connection ~ 8300 4000
+Wire Wire Line
+	7750 4000 8300 4000
+Wire Wire Line
+	9000 3450 8900 3450
+Wire Wire Line
+	8300 3450 8400 3450
+Wire Wire Line
+	8900 3350 9000 3350
+Wire Wire Line
+	8300 3350 8400 3350
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J2
+U 1 1 6068A838
+P 8600 3350
+F 0 "J2" H 8650 3475 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 8650 3476 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 8600 3350 50  0001 C CNN
+F 3 "~" H 8600 3350 50  0001 C CNN
+	1    8600 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3400 8300 3400
+Connection ~ 8300 3400
+Wire Wire Line
+	8300 3400 8300 3450
+Wire Wire Line
+	8300 3400 8300 3350
+Wire Wire Line
+	9000 4050 9000 4350
+$Comp
+L power:GND #PWR03
+U 1 1 6068E8DD
+P 9000 4350
+F 0 "#PWR03" H 9000 4100 50  0001 C CNN
+F 1 "GND" H 9005 4177 50  0000 C CNN
+F 2 "" H 9000 4350 50  0001 C CNN
+F 3 "" H 9000 4350 50  0001 C CNN
+	1    9000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 606AD316
+P 3250 3300
+F 0 "SW1" H 3300 3100 50  0000 C CNN
+F 1 "SW_SPDT" H 3250 3494 50  0001 C CNN
+F 2 "Switches:SWITCH_SPST_SMD_A" H 3250 3300 50  0001 C CNN
+F 3 "~" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3450 3300 3450 3400
+NoConn ~ 3450 3200
+NoConn ~ -1950 950 
+$EndSCHEMATC
