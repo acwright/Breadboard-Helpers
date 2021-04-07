@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "A.C. Wright Logo")(type KiCad)(uri "${KIPRJMOD}/A.C. Wright Logo.pretty")(options "")(descr ""))
+  (lib (name "Switch Helper")(type KiCad)(uri "${KIPRJMOD}/Switch Helper.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,309 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Switch Helper"
+Date "2021-04-02"
+Rev "1"
+Comp "A.C. Wright Design"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x10 J1
+U 1 1 606A009B
+P 3150 2450
+F 0 "J1" H 3068 1817 50  0000 C CNN
+F 1 "Conn_01x10" H 3068 1816 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 3150 2450 50  0001 C CNN
+F 3 "~" H 3150 2450 50  0001 C CNN
+	1    3150 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J2
+U 1 1 606A1ACA
+P 3150 3700
+F 0 "J2" H 3068 3067 50  0000 C CNN
+F 1 "Conn_01x10" H 3068 3066 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 3150 3700 50  0001 C CNN
+F 3 "~" H 3150 3700 50  0001 C CNN
+	1    3150 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 606E978B
+P 6300 2500
+F 0 "R1" H 6370 2546 50  0000 L CNN
+F 1 "10k" H 6370 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6230 2500 50  0001 C CNN
+F 3 "~" H 6300 2500 50  0001 C CNN
+F 4 "C17414" H 6300 2500 50  0001 C CNN "JLCPCB"
+	1    6300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 606E9A2B
+P 6750 3200
+F 0 "R2" V 6543 3200 50  0000 C CNN
+F 1 "10k" V 6634 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 3200 50  0001 C CNN
+F 3 "~" H 6750 3200 50  0001 C CNN
+F 4 "C17414" H 6750 3200 50  0001 C CNN "JLCPCB"
+	1    6750 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 606EA2A6
+P 6750 2850
+F 0 "D1" H 6750 2633 50  0000 C CNN
+F 1 "SM4007PL" H 6750 2724 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 6750 2850 50  0001 C CNN
+F 3 "~" H 6750 2850 50  0001 C CNN
+F 4 "C64898" H 6750 2850 50  0001 C CNN "JLCPCB"
+	1    6750 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 606EADE4
+P 7200 3600
+F 0 "C1" H 7315 3646 50  0000 L CNN
+F 1 "100nF" H 7315 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7238 3450 50  0001 C CNN
+F 3 "~" H 7200 3600 50  0001 C CNN
+F 4 "C49678" H 7200 3600 50  0001 C CNN "JLCPCB"
+	1    7200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 606EBE5B
+P 6300 3550
+F 0 "SW1" V 6346 3462 50  0000 R CNN
+F 1 "SW_SPST" V 6255 3462 50  0000 R CNN
+F 2 "Switch Helper:SW_TS-1187A-B-A-B" H 6300 3550 50  0001 C CNN
+F 3 "~" H 6300 3550 50  0001 C CNN
+F 4 "C318884" V 6300 3550 50  0001 C CNN "JLCPCB"
+	1    6300 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6300 3350 6300 3200
+Wire Wire Line
+	6300 3200 6600 3200
+Wire Wire Line
+	6300 2650 6300 2850
+Connection ~ 6300 3200
+Wire Wire Line
+	6600 2850 6300 2850
+Connection ~ 6300 2850
+Wire Wire Line
+	6300 2850 6300 3200
+Wire Wire Line
+	6900 2850 7200 2850
+Wire Wire Line
+	7200 2850 7200 3200
+Wire Wire Line
+	6900 3200 7200 3200
+Connection ~ 7200 3200
+Wire Wire Line
+	7200 3200 7200 3450
+Wire Wire Line
+	6300 3750 6300 3950
+Wire Wire Line
+	6300 3950 7200 3950
+Wire Wire Line
+	7200 3950 7200 3750
+Wire Wire Line
+	7200 3950 7200 4100
+Connection ~ 7200 3950
+Wire Wire Line
+	6300 2200 6300 2300
+Text GLabel 6300 2200 1    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR02
+U 1 1 606EDB9F
+P 7200 4100
+F 0 "#PWR02" H 7200 3850 50  0001 C CNN
+F 1 "GND" H 7205 3927 50  0000 C CNN
+F 2 "" H 7200 4100 50  0001 C CNN
+F 3 "" H 7200 4100 50  0001 C CNN
+	1    7200 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3200 7550 3200
+$Comp
+L 74xGxx:SN74LVC1G14DBV U1
+U 1 1 606F1400
+P 7750 3200
+F 0 "U1" H 7850 3100 50  0000 L CNN
+F 1 "SN74LVC1G14DBV" H 7850 3000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7750 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf" H 7750 3200 50  0001 C CNN
+F 4 "C7835" H 7750 3200 50  0001 C CNN "JLCPCB"
+	1    7750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3000 7750 2300
+Wire Wire Line
+	7750 2300 6300 2300
+Connection ~ 6300 2300
+Wire Wire Line
+	6300 2300 6300 2350
+Wire Wire Line
+	7750 3400 7750 3950
+Wire Wire Line
+	7750 3950 7200 3950
+Wire Wire Line
+	8050 3200 8650 3200
+Text GLabel 8650 3200 2    50   Output ~ 0
+OUT
+Wire Wire Line
+	3350 1950 3450 1950
+Wire Wire Line
+	3450 1950 3450 2050
+Wire Wire Line
+	3450 2050 3350 2050
+Wire Wire Line
+	3450 1950 3550 1950
+Connection ~ 3450 1950
+Text GLabel 3550 1950 2    50   Output ~ 0
+VCC
+Wire Wire Line
+	3350 3200 3450 3200
+Wire Wire Line
+	3450 3300 3350 3300
+Wire Wire Line
+	3450 3200 3650 3200
+Connection ~ 3450 3200
+$Comp
+L power:GND #PWR01
+U 1 1 606F44F1
+P 3650 3300
+F 0 "#PWR01" H 3650 3050 50  0001 C CNN
+F 1 "GND" H 3655 3127 50  0000 C CNN
+F 2 "" H 3650 3300 50  0001 C CNN
+F 3 "" H 3650 3300 50  0001 C CNN
+	1    3650 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2150 3450 2150
+Wire Wire Line
+	3450 2150 3450 2250
+Wire Wire Line
+	3450 2850 3350 2850
+Wire Wire Line
+	3350 2250 3450 2250
+Connection ~ 3450 2250
+Wire Wire Line
+	3450 2250 3450 2350
+Wire Wire Line
+	3350 2350 3450 2350
+Connection ~ 3450 2350
+Wire Wire Line
+	3450 2350 3450 2450
+Wire Wire Line
+	3350 2450 3450 2450
+Connection ~ 3450 2450
+Wire Wire Line
+	3450 2450 3450 2550
+Wire Wire Line
+	3350 2550 3450 2550
+Connection ~ 3450 2550
+Wire Wire Line
+	3450 2550 3450 2650
+Wire Wire Line
+	3350 2650 3450 2650
+Connection ~ 3450 2650
+Wire Wire Line
+	3450 2650 3450 2750
+Wire Wire Line
+	3350 2750 3450 2750
+Connection ~ 3450 2750
+Wire Wire Line
+	3450 2750 3450 2850
+Wire Wire Line
+	3350 3400 3450 3400
+Wire Wire Line
+	3450 3400 3450 3500
+Wire Wire Line
+	3450 4100 3350 4100
+Wire Wire Line
+	3350 3500 3450 3500
+Connection ~ 3450 3500
+Wire Wire Line
+	3450 3500 3450 3600
+Wire Wire Line
+	3350 3600 3450 3600
+Connection ~ 3450 3600
+Wire Wire Line
+	3450 3600 3450 3700
+Wire Wire Line
+	3350 3700 3450 3700
+Connection ~ 3450 3700
+Wire Wire Line
+	3450 3700 3450 3800
+Wire Wire Line
+	3350 3800 3450 3800
+Connection ~ 3450 3800
+Wire Wire Line
+	3450 3800 3450 3900
+Wire Wire Line
+	3350 3900 3450 3900
+Connection ~ 3450 3900
+Wire Wire Line
+	3450 3900 3450 4000
+Wire Wire Line
+	3350 4000 3450 4000
+Connection ~ 3450 4000
+Wire Wire Line
+	3450 4000 3450 4100
+Wire Wire Line
+	3450 4100 3550 4100
+Connection ~ 3450 4100
+Wire Wire Line
+	3450 2850 3550 2850
+Connection ~ 3450 2850
+Text GLabel 3550 2850 2    50   Input ~ 0
+OUT
+Text GLabel 3550 4100 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	3650 3200 3650 3300
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 606E1152
+P 3450 1950
+F 0 "#FLG0101" H 3450 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 3450 2123 50  0001 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "~" H 3450 1950 50  0001 C CNN
+	1    3450 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3200 3450 3300
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 606E19AE
+P 3450 3200
+F 0 "#FLG0102" H 3450 3275 50  0001 C CNN
+F 1 "PWR_FLAG" H 3450 3373 50  0001 C CNN
+F 2 "" H 3450 3200 50  0001 C CNN
+F 3 "~" H 3450 3200 50  0001 C CNN
+	1    3450 3200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
